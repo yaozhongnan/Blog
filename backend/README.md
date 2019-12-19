@@ -15,7 +15,7 @@ npx sequelize db:migrate
 npx sequelize db:migrate:undo
 
 # 撤销所有
-npx sequelize db:migrate:all
+npx sequelize db:migrate:undo:all
 ```
 
 

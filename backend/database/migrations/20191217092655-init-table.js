@@ -1,11 +1,12 @@
 "use strict";
 
+// 初始化数据库表
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const { INTEGER, DATE, STRING, ENUM } = Sequelize;
 
     // 文章分类表
-    await queryInterface.createTable("Category", {
+    await queryInterface.createTable("category", {
       category_id: { type: INTEGER, primaryKey: true, autoIncrement: true },
       name: {
         type: STRING,
@@ -24,7 +25,7 @@ module.exports = {
     });
 
     // 文章表
-    await queryInterface.createTable("Article", {
+    await queryInterface.createTable("article", {
       article_id: {
         type: INTEGER,
         primaryKey: true,
@@ -40,23 +41,23 @@ module.exports = {
       },
       description: {
         type: STRING,
-        allowNull: false
+        allowNull: true
       },
       illustration: {
         type: STRING,
-        allowNull: false
+        allowNull: true
       },
       author: {
         type: STRING,
-        allowNull: false
+        allowNull: true
       },
       content: {
         type: STRING,
-        allowNull: false
+        allowNull: true
       },
       label: {
         type: STRING,
-        allowNull: false
+        allowNull: true
       },
       isfixtop: {
         // 1 - 置顶， 2 - 非置顶
@@ -92,7 +93,7 @@ module.exports = {
   },
 
   down: async queryInterface => {
-    await queryInterface.dropTable("Category");
-    await queryInterface.dropTable("Article");
+    await queryInterface.dropTable("category");
+    await queryInterface.dropTable("article");
   }
 };

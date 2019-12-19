@@ -1,0 +1,20 @@
+.basicLayout {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  .headerContainer {
+    height: 60px;
+    background-color: #fff;
+    .headerWrapper {
+      width: calc(100vw - 30px);
+      max-width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+  .mainContainer{
+    width: 100%;
+  }
+  .footerContainer{
+    margin-top: 40px;
+  }
+}

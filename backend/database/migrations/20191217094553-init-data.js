@@ -1,9 +1,10 @@
 "use strict";
 
+// 初始化数据库表中的数据
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert(
-      "Category",
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkInsert(
+      "category",
       [
         {
           name: "前端"
@@ -15,25 +16,31 @@ module.exports = {
       {}
     );
 
-    // queryInterface.bulkInsert(
-    //   "Article",
-    //   [
-    //     {
-    //       name: "前端",
-    //       created_at: new Date(),
-    //       updated_at: new Date()
-    //     },
-    //     {
-    //       name: "后端",
-    //       created_at: new Date(),
-    //       updated_at: new Date()
-    //     }
-    //   ],
-    //   {}
-    // );
+    await queryInterface.bulkInsert(
+      "article",
+      [
+        {
+          title: "这是一个标题",
+          category_id: 1,
+          author: "mohen",
+          isfixtop: 1
+        },
+        {
+          title: "这是一个标题2222",
+          category_id: 1,
+          author: "mohen",
+          isfixtop: 2
+        }
+      ],
+      {}
+    );
+
+    return queryInterface;
   },
 
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete("Category", null, {});
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete("category", null, {});
+    await queryInterface.bulkDelete("article", null, {});
+    return queryInterface;
   }
 };

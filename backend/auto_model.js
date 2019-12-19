@@ -2,7 +2,7 @@
 
 const path = require("path");
 const EggSequelizeAuto = require("egg-sequelize-auto");
-const config = require("./config/config.default").sequelize;
+const config = require("./config/config.local").sequelize;
 
 const { database, username, host, password, dialect, port } = config;
 const directory = path.join(__dirname, "./app/model");

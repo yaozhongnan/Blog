@@ -1,0 +1,16 @@
+.blogLayoutContainer {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 30px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.blogLayoutContainer_left {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+.blogLayoutContainer_list {
+  flex: 1 1 auto;
+}

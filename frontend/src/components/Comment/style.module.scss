@@ -1,0 +1,22 @@
+.comment_container {
+  margin-bottom: 20px;
+  .editer_container {
+    margin-bottom: 20px;
+    .editer_toolbar {
+      border: 1px solid #e6e6e6;
+      padding: 6px 10px;
+      border-bottom: none;
+    }
+
+    .editer_text {
+      height: 150px;
+      border: 1px solid #e6e6e6;
+    }
+  }
+}
+.w-e-panel-container {
+  left: 160px;
+}
+.el-loading-spinner {
+  top: 200px;
+}

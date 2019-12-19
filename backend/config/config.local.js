@@ -1,7 +1,5 @@
 "use strict";
 
-exports.security = {};
-
 exports.sequelize = {
   dialect: "mysql",
   database: "blog_development",
