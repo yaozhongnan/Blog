@@ -3,6 +3,7 @@
   "rules": {
     "no-console": "off",
     "quotes": [1, "double"],
-    "comma-dangle": [2, "never"]
+    "comma-dangle": [2, "never"],
+    "array-bracket-spacing": [2, "never"]
   }
 }

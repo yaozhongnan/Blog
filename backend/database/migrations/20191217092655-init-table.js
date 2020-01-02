@@ -7,20 +7,23 @@ module.exports = {
 
     // 文章分类表
     await queryInterface.createTable("category", {
-      category_id: { type: INTEGER, primaryKey: true, autoIncrement: true },
+      category_id: {
+        type: INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: true
+      },
       name: {
         type: STRING,
         allowNull: false
       },
       created_at: {
         type: DATE,
-        allowNull: false,
-        defaultValue: new Date()
+        allowNull: false
       },
       updated_at: {
         type: DATE,
-        allowNull: false,
-        defaultValue: new Date()
+        allowNull: false
       }
     });
 
@@ -29,6 +32,7 @@ module.exports = {
       article_id: {
         type: INTEGER,
         primaryKey: true,
+        allowNull: false,
         autoIncrement: true
       },
       category_id: {
@@ -81,13 +85,11 @@ module.exports = {
       },
       created_at: {
         type: DATE,
-        allowNull: false,
-        defaultValue: new Date()
+        allowNull: false
       },
       updated_at: {
         type: DATE,
-        allowNull: false,
-        defaultValue: new Date()
+        allowNull: false
       }
     });
   },

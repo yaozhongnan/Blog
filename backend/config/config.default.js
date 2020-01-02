@@ -13,3 +13,5 @@ exports.view = {
   defaultViewEngine: "nunjucks",
   defaultExtension: ".tpl"
 };
+
+exports.middleware = ["error"];

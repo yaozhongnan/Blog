@@ -9,3 +9,9 @@ exports.sequelize = {
   password: "123456",
   timezone: "Asia/Shanghai"
 };
+
+exports.security = {
+  csrf: {
+    enable: false
+  }
+};

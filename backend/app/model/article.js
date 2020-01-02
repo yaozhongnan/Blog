@@ -9,7 +9,8 @@ module.exports = app => {
       article_id: {
         type: DataTypes.INTEGER(11),
         allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
       category_id: {
         type: DataTypes.INTEGER(11),
@@ -60,12 +61,12 @@ module.exports = app => {
       created_at: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: "2019-12-19 09:11:23"
+        defaultValue: DataTypes.literal("CURRENT_TIMESTAMP")
       },
       updated_at: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: "2019-12-19 09:11:23"
+        defaultValue: DataTypes.literal("CURRENT_TIMESTAMP")
       }
     },
     {
