@@ -1,12 +1,14 @@
 "use strict";
 
 module.exports = app => {
-  class ArticleService extends app.Service {
-    async getBatteryList() {
-      const sql = ``;
+  const { model, Service } = app;
+  const { Article: ArticleModel } = model;
 
-      const data = await app.model.query(sql);
-
+  class ArticleService extends Service {
+    async readList() {
+      const data = await ArticleModel.findAll({
+        // attributes: ["category_id", "name", "created_at", "updated_at"]
+      });
       return data;
     }
   }

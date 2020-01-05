@@ -1,9 +1,10 @@
 "use strict";
 
 module.exports = app => {
-  const { Category: CategoryModel } = app.model;
+  const { model, Service } = app;
+  const { Category: CategoryModel } = model;
 
-  class CategoryService extends app.Service {
+  class CategoryService extends Service {
     async read() {
       const data = await CategoryModel.findAll({
         attributes: ["category_id", "name", "created_at", "updated_at"]

@@ -7,7 +7,7 @@ import styles from './index.less';
 function Home(props) {
   const handleEnterBlogClick = () => {
     const { history } = props;
-    history.push('/a');
+    history.push('/blog');
   };
 
   return (
