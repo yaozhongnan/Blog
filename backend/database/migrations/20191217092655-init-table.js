@@ -3,7 +3,7 @@
 // 初始化数据库表
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const { INTEGER, DATE, STRING, ENUM } = Sequelize;
+    const { INTEGER, DATE, STRING, NOW } = Sequelize;
 
     // 文章分类表
     await queryInterface.createTable("category", {
@@ -19,11 +19,11 @@ module.exports = {
       },
       created_at: {
         type: DATE,
-        allowNull: false
+        defaultValue: NOW
       },
       updated_at: {
         type: DATE,
-        allowNull: false
+        defaultValue: NOW
       }
     });
 
@@ -64,14 +64,12 @@ module.exports = {
         allowNull: true
       },
       isfixtop: {
-        // 1 - 置顶， 2 - 非置顶
-        type: ENUM,
-        values: ["1", "2"]
+        type: INTEGER,
+        defaultValue: 0
       },
       isoriginal: {
-        // 1 - 原创， 2 - 非原创
-        type: ENUM,
-        values: ["1", "2"]
+        type: INTEGER,
+        defaultValue: 1
       },
       watch_num: {
         type: INTEGER,
@@ -85,11 +83,11 @@ module.exports = {
       },
       created_at: {
         type: DATE,
-        allowNull: false
+        defaultValue: NOW
       },
       updated_at: {
         type: DATE,
-        allowNull: false
+        defaultValue: NOW
       }
     });
   },

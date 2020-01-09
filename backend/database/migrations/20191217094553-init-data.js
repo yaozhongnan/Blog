@@ -7,14 +7,10 @@ module.exports = {
       "category",
       [
         {
-          name: "前端",
-          created_at: new Date(),
-          updated_at: new Date()
+          name: "frontend"
         },
         {
-          name: "后端",
-          created_at: new Date(),
-          updated_at: new Date()
+          name: "backend"
         }
       ],
       {}
@@ -24,20 +20,12 @@ module.exports = {
       "article",
       [
         {
-          title: "这是一个标题",
-          category_id: 1,
-          author: "mohen",
-          isfixtop: 1,
-          created_at: new Date(),
-          updated_at: new Date()
+          title: "first title",
+          category_id: 1
         },
         {
-          title: "这是一个标题2222",
-          category_id: 1,
-          author: "mohen",
-          isfixtop: 2,
-          created_at: new Date(),
-          updated_at: new Date()
+          title: "last title",
+          category_id: 1
         }
       ],
       {}
