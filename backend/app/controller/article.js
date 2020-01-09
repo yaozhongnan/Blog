@@ -53,26 +53,12 @@ class ArticleController extends Controller {
       return;
     }
 
-    // const {
-    //   category_id,
-    //   title,
-    //   description,
-    //   illustration,
-    //   author = "mohen",
-    //   content,
-    //   label,
-    //   isfixtop = 0,
-    //   isoriginal = 1,
-    //   watch_num = 0,
-    //   praise_num = 0
-    // } = ctx.request.body;
     const params = ctx.request.body;
-    console.log(params);
-
-    await service.article.create(params);
+    const data = await service.article.create(params);
 
     ctx.body = {
-      success: true
+      success: true,
+      data
     };
   }
 }
