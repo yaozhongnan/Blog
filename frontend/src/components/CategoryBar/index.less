@@ -1,0 +1,31 @@
+.container {
+  background-color: #fff;
+  height: 45px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  .list {
+    display: flex;
+    height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+
+    li {
+      flex-shrink: 0;
+      cursor: pointer;
+      line-height: 45px;
+    }
+
+    li + li {
+      padding: 0 12px;
+    }
+
+    li.active {
+      color: #1890ff;
+    }
+
+    li:hover {
+      color: #1890ff;
+    }
+  }
+}

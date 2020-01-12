@@ -1,12 +1,22 @@
-// import styles from './index.css';
+import { Fragment } from 'react';
+import CategoryBar from '@/components/CategoryBar';
+import GlobalHeader from '@/components/GlobalHeader';
+import styles from './index.css';
 
-function BasicLayout(props) {
+function GlobalLayout(props) {
   return (
-    <div>
-      {/* <h1 className={styles.title}>Yay! Welcome to umi!</h1> */}
-      {props.children}
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        {props.location.pathname === '/' ? null : (
+          <Fragment>
+            <GlobalHeader />
+            <CategoryBar />
+          </Fragment>
+        )}
+        {props.children}
+      </div>
     </div>
   );
 }
 
-export default BasicLayout;
+export default GlobalLayout;
