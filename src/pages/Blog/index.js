@@ -62,6 +62,15 @@ class Blog extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.wrapper}>
+          {/* <header className={styles.header}>
+            <ul>
+              <li>前端</li>
+              <li>后端</li>
+              <li>个人笔记</li>
+              <li>转载</li>
+              <li>其他</li>
+            </ul>
+          </header> */}
           <InfiniteScroll
             initialLoad={false}
             pageStart={0}
